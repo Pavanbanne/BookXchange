@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/90d93e4ce3.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+        .home-bg {
+            background-color: #29047aee;
+            color: white;
+            font-family: 'georgia', sans-serif;
+        }
+
+        #profile {
+            padding: 50px;
+            text-align: center;
+            /* font-family: 'Lucida Sans', 'Lucida San 'Verdana, sans-serif'; */
+        }
+
+        #username {
+            color: rgba(174, 4, 4, 0.99);
+            font-weight: 600;
+            font-family: 'lucida calligraphy', 'cursive';
+            text-transform: uppercase;
+            font-size: 40px;
+
+        }
+
+        ul li {
+            list-style-type: none;
+            font-size: 20px;
+            padding: 0px;
+            margin: 0px;
+            text-align: left;
+        }
+
+        .image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            background-size: cover;
+        }
+
+        .gener-item {
+            /* padding: 20px; */
+            border-radius: 30px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            align-items: center;
+        }
+        .gener-item:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        form{
+            border: 2px solid rgb(152, 136, 136);
+            padding: 20px 10px;
+            width: 300px;
+            border-radius: 12px;
+            margin: auto;
+        }
+        .contact-icons {
+            font-size: 30px;
+            color: white;
+            margin: 10px;
+            cursor: pointer;
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="pb-4">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid nav-bg ">
+                <a class="navbar-brand" href="#">
+                    <img src="/icon.jpg" alt="" width="50px" height="50px"
+                        class=" rounded border border-1 border-dark">
+                </a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav nav-items ms-auto pe-5">
+                        <a class="nav-link " aria-current="page" href="home.html">Home</a>
+                        <a class="nav-link" href="#profile">Profile</a>
+                        <a class="nav-link" href="#gener">Gener</a>
+                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#contact">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="home-bg mt-5 ">
+        <div id="profile">
+            <h1>Hello Welcome <span id="username"></span>, </h1>
+            <h4 class="text-capitalize text-start">Here is your account details</h4>
+            <ul>
+                <li>Books Taken : <span class="text-danger">2 </span></li>
+                <li>Books Returned : <span class="text-danger">1 </span></li>
+                <li>Books Pending : <span class="text-danger">1 </span></li>
+                <li>Books Taken : <span class="text-danger">2 </span></li>
+                <li>Credits Earned : <span class="text-danger">10 </span></li>
+            </ul>
+            <button type="button" class="btn btn-light" onclick="sellform(event)">Sell A Book</button>
+        </div>
+        <div id="gener" class=" text-dark bg-light">
+            <h2 class="text-center pt-4 pb-4">Available Books Gener</h2>
+            <div class="container">
+                <div class="row">
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/2177743654/vector/genre-icon.jpg?s=1024x1024&w=is&k=20&c=4IoNu1noDCQikEipmdKDwYxyJJnQH8NYGFxjuNK9EtU="
+                                alt="Fiction">
+                            <h4 class="text-center">Adventure</h4>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/1276735227/vector/book.jpg?s=612x612&w=0&k=20&c=E3CLSVugGEw6gvRGZ3tUc0P9Qe3OubZ6hzAEv8E8_XQ="
+                                alt="Fiction">
+                            <h4 class="text-center">Science</h4>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/2166869377/vector/math-book.jpg?s=612x612&w=0&k=20&c=SDmglVEte5fUQNiGAAM2ue2tVaZxzO_v_5H7G9zSZCU="
+                                alt="Fiction">
+                            <h4 class="text-center">Maths</h4>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/2198124408/vector/magic-book.jpg?s=612x612&w=0&k=20&c=R-4qf5Pjc2oYOO4Snlf1cTHEDA8rnF7C42vgFpN-4ww="
+                                alt="Fiction">
+                            <h4 class="text-center">Magic</h4>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/2202488660/vector/router-icon.jpg?s=612x612&w=0&k=20&c=KgFGNQnHVJXVT2TXOa0p56BH7utyQby6jgeel3_S4DY=   "
+
+                                alt="Fiction">
+                            <h4 class="text-center">Map</h4>
+                        </div>
+                    </div>
+                    <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/2238565004/vector/recipe-book-and-spoon-solid-icon-cooking-concept-vector-graphics-notepad-sign-on-white.jpg?s=612x612&w=0&k=20&c=dhgdDUGawMV-XWTPRjGVJE8gI_63ke4Z9Zvtgp5QlXw="
+                                alt="Fiction">
+                            <h4 class="text-center">Recipe</h4>
+                        </div>
+                    </div>
+                     <div class=" col-12 col-md-4 mb-4">
+                        <div class="gener-item  d-flex flex-row  shadow">
+                            <img class="image"
+                                src="https://media.istockphoto.com/id/1325048740/vector/book.jpg?s=612x612&w=0&k=20&c=BO3bLJl1PkfxsJ6EwOlIqWaGnUijwzUXONDiLZ3h1KQ="
+
+                                alt="Fiction">
+                            <h4 class="text-center">History</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="about" class="bg-secondary">
+            <h1  class="text-center pt-4">About Us</h1>
+            <p class="text-center p-4">BookXchange is a community-driven platform dedicated to promoting literacy and
+                fostering a love for reading. Our mission is to make books accessible to everyone while encouraging the
+                sharing of knowledge and stories. Whether you're looking to find your next favorite read or want to share
+                your own collection, BookXchange is here to connect readers and create a vibrant literary community.
+            </p> 
+            <h3 class="text-center text-info">Turn your old books into new opportunities — share, exchange, and keep learning! And aswell borrow what you need</h3>
+        </div>
+        <div class="text-center bg-dark" id="contact">
+            <h2 class="text-white pt-4">Contact Us</h2>
+            <p class="text-white pb-4">For inquiries, support, or feedback, please fill the following form:</p> 
+            <form action="" class="text-center shadow">
+                <input type="text" placeholder="Your Name" class="mb-3 p-2 rounded"><br>
+                <input type="email" placeholder="Your Email" class="mb-3 p-2 rounded"><br>
+                <textarea name="message" rows="4" placeholder="Your Message" class="mb-3 p-2 rounded"></textarea><br>
+                <button type="submit" class="btn btn-light mb-3">Submit</button>
+            </form>
+            <i class="fa-solid contact-icons fa-envelope"></i>
+            <i class="fa-brands contact-icons fa-instagram"></i>
+            <i class="fa-brands contact-icons fa-x-twitter"></i>
+            <i class="fa-brands contact-icons fa-whatsapp"></i>
+<p class="text-center pb-3"><i class="fa-solid fa-copyright"></i>2025 BooKXchange | All rights reserved</p>
+        </div>
+
+                <script>
+                    const Getusername = localStorage.getItem('username');
+                    document.getElementById('username').innerHTML = Getusername;
+                    function sellform(event) {
+                        event.preventDefault();
+                        prompt('Enter Book Name');
+                        prompt('Enter Author Name');
+                        prompt('Enter Price');
+                        prompt('Enter Book Condition and Description');
+                        // prompt(<input type="image">upload</input>);
+                        alert('Your book has been listed for sale!');
+                    }
+                </script>
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+                    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+                    crossorigin="anonymous"></script>
+</body>
+
+</html>
